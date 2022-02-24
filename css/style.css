@@ -128,7 +128,7 @@ body._lock {
 
 @media (max-width: 47.99875em) {
   ._container {
-    max-width: none;
+    max-width: 600px;
     padding-left: 28.738px;
     padding-right: 28.738px;
   }
@@ -451,6 +451,7 @@ body._lock {
 .header__container {
   padding-top: 14.48px;
   padding-bottom: 14.48px;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -1118,9 +1119,9 @@ body._lock {
     display: none;
   }
   .menu__list {
-    -webkit-transition: all 0.5s linear 0s;
-    -o-transition: all 0.5s linear 0s;
-    transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
     position: absolute;
     top: 0;
     right: -100%;
@@ -1135,6 +1136,7 @@ body._lock {
             justify-content: start;
     background: #fff;
     width: 50%;
+    min-width: 225px;
     min-height: 100%;
     padding: 70px 15px;
   }
@@ -1175,9 +1177,9 @@ body._lock {
     background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
     overflow-x: hidden;
-    -webkit-transition: all 0.5s linear 0s;
-    -o-transition: all 0.5s linear 0s;
-    transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
     opacity: 0;
     pointer-events: none;
   }
