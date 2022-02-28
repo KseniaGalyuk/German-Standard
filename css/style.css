@@ -1136,7 +1136,8 @@ body._lock {
             justify-content: start;
     background: #fff;
     width: 50%;
-    min-width: 225px;
+    min-width: 270px;
+    max-width: 300px;
     min-height: 100%;
     padding: 70px 15px;
   }
@@ -1174,17 +1175,16 @@ body._lock {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
     overflow: auto;
     overflow-x: hidden;
     -webkit-transition: all 0.3s linear 0s;
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
-    opacity: 0;
     pointer-events: none;
   }
   .menu__body._active {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
     pointer-events: auto;
   }
   .menu__body._active .menu__list {
@@ -1205,7 +1205,6 @@ body._lock {
     width: 35.5px;
     height: 35px;
     cursor: pointer;
-    z-index: 5;
     border: 1px solid #e3010f;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;

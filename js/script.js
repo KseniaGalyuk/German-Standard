@@ -5,17 +5,23 @@ let unlock = true;
 //*</ Общие переменные>==========================================================================================
 
 //Меню бургер
-const iconMenu = document.querySelector('.icon-menu');
+const iconMenu = document.querySelectorAll('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu != null) {
 	document.addEventListener('click', function (e) {
 		if (e.target.closest('.icon-menu')) {
-			iconMenu.classList.toggle('_active');
+			iconMenu.forEach(iconMenuOne => {
+				iconMenuOne.classList.toggle('_active');
+			});
+			// iconMenu.classList.toggle('_active');
 			menuBody.classList.toggle('_active');
 			bodyLock();
 		}
 		if (!e.target.closest('.icon-menu') && !e.target.closest('._popup-link') && !e.target.closest('.popup__content')) {
-			iconMenu.classList.remove('_active');
+			// iconMenu.classList.remove('_active');
+			iconMenu.forEach(iconMenuOne => {
+				iconMenuOne.classList.remove('_active');
+			});
 			menuBody.classList.remove('_active');
 			bodyUnLock();
 		}
