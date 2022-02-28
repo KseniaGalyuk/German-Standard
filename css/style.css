@@ -381,13 +381,13 @@ body._lock {
   height: 54px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  overflow: hidden;
   border: 1px solid #e3010f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 26px;
   padding-left: 26px;
   background: #ffffff;
+  font-size: 0.9375rem;
 }
 
 @media (max-width: 1200px) {
@@ -413,24 +413,28 @@ body._lock {
 
 .stock__input::-webkit-input-placeholder {
   font-size: 0.9375rem;
+  line-height: 1.5;
   color: #7d7d7d;
   font-weight: 600;
 }
 
 .stock__input:-ms-input-placeholder {
   font-size: 0.9375rem;
+  line-height: 1.5;
   color: #7d7d7d;
   font-weight: 600;
 }
 
 .stock__input::-ms-input-placeholder {
   font-size: 0.9375rem;
+  line-height: 1.5;
   color: #7d7d7d;
   font-weight: 600;
 }
 
 .stock__input::placeholder {
   font-size: 0.9375rem;
+  line-height: 1.5;
   color: #7d7d7d;
   font-weight: 600;
 }
@@ -471,6 +475,9 @@ body._lock {
   .stock__date {
     font-size: 0.875rem;
   }
+  .stock__input {
+    font-size: 0.8125rem;
+  }
   .stock__input::-webkit-input-placeholder {
     font-size: 0.8125rem;
   }
@@ -510,38 +517,21 @@ body._lock {
     overflow: auto;
     padding: 0 25px;
     margin-bottom: 10px;
-    position: relative;
+    font-size: 0.875rem;
   }
   .stock__input::-webkit-input-placeholder {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     font-size: 0.875rem;
     font-weight: normal;
   }
   .stock__input:-ms-input-placeholder {
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
     font-size: 0.875rem;
     font-weight: normal;
   }
   .stock__input::-ms-input-placeholder {
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
     font-size: 0.875rem;
     font-weight: normal;
   }
   .stock__input::placeholder {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
     font-size: 0.875rem;
     font-weight: normal;
   }
@@ -1539,8 +1529,8 @@ body._lock {
   }
   .menu__body._active {
     background-color: rgba(0, 0, 0, 0.6);
-    pointer-events: auto;
     overflow-y: auto;
+    pointer-events: auto;
   }
   .menu__body._active .menu__list {
     right: 0;
