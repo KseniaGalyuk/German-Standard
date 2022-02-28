@@ -1627,6 +1627,9 @@ body._lock {
     bottom: -webkit-calc(50% - 1px);
     bottom: calc(50% - 1px);
   }
+  .icon-menu_none::after {
+    display: none;
+  }
 }
 
 /*
