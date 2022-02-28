@@ -342,7 +342,7 @@ function bodyUnLock() {
 		}
 		body.style.paddingRight = '0px';
 		body.classList.remove('_lock')
-	}, timeout);
+	}, 200);
 
 	unlock = false;
 	setTimeout(function () {
