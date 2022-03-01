@@ -2027,6 +2027,17 @@ body._lock {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  -webkit-flex-basis: 254px;
+      -ms-flex-preferred-size: 254px;
+          flex-basis: 254px;
+}
+
+@media (max-width: 1200px) {
+  .advantage__item {
+    -webkit-flex-basis: -webkit-calc(73px + 181 * ((100vw - 320px) / 880));
+        -ms-flex-preferred-size: calc(73px + 181 * ((100vw - 320px) / 880));
+            flex-basis: calc(73px + 181 * ((100vw - 320px) / 880));
+  }
 }
 
 @media (max-width: 47.99875em) {
