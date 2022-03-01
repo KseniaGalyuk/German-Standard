@@ -27,6 +27,24 @@ if (iconMenu != null) {
 		}
 	});
 };
+//Изменение текста плейсхолдера
+// let stockInputs = document.querySelectorAll('.stock__input');
+// const mQuery = window.matchMedia('(max-width: 767.98px)');
+// if (stockInputs.length > 0) {
+// 	function handleTabletChange(e) {
+// 		if (e.matches) {
+// 			stockInputs.forEach(stockInput => {
+// 				stockInput.placeholder = 'Введите номер';
+// 			});
+// 		} else {
+// 			stockInputs.forEach(stockInput => {
+// 				stockInput.placeholder = 'Введите номер телефона';
+// 			});
+// 		}
+// 	}
+// 	mQuery.addListener(handleTabletChange);
+// 	handleTabletChange(mQuery);
+// }
 //спойлеры
 const iconQuestions = document.querySelectorAll('.question__title');
 const iconsQuestions = document.querySelectorAll('.question__icon');
@@ -133,41 +151,6 @@ let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-//рейтинг звезд (на 5 звезд), при нажатии добавляется класс и ко всем следующим(блок надо перевернуть флексом, чтобы добавлялось к "предыдущим"), при повторном наведении сбрасывается, при уходе возвращается к предыдущему выбору.Каждой звезде надо задать id в обычном порядке, в одном рейтинге id 1.1, 1.2, 1.3 и т.д, в другом с другой цифры начинается
-const stars = document.querySelectorAll('.star-rating');
-let starActiv = new Array(5); //В этой переменной кол-во рейтингов + 1 (starActiv[0]) и сколько звезд в каком рейтинге выбрано
-if (stars.length > 0) {
-	for (let i = 0; i < stars.length; i++) {
-		stars[i].addEventListener('click', function (e) {
-			stars[i].classList.add('_active');
-			let d = Number(e.target.id);
-			starActiv[Math.floor(d)] = Math.round((Number(`${Math.floor(d)}.5`) - d) * 10);
-			for (let j = 1; j <= 5; j++) {
-				let newD = d + Number(`0.${j}`);
-				if (newD == `${Math.floor(newD)}.6`) break;
-				let elem = document.getElementById(newD.toFixed(1));
-				if (elem != null) {
-					elem.classList.add('_active');
-				}
-			};
-		});
-		stars[i].addEventListener('mouseover', function (e) {
-			stars[i].classList.remove('_active');
-			let d = Number(e.target.id);
-			for (let j = 1; j <= 5; j++) {
-				let newD = Number(`${Math.floor(d)}.${j}`);
-				document.getElementById(newD.toFixed(1)).classList.remove('_active');
-			};
-		});
-		stars[i].addEventListener('mouseout', function (e) {
-			let d = Number(e.target.id);
-			for (let j = 0; j <= starActiv[Math.floor(d)]; j++) {
-				let newD = Number(`${Math.floor(d)}.5`) - Number(`0.${j}`);
-				document.getElementById(newD).classList.add('_active');
-			}
-		});
-	};
-};
 //Прокрутка к началу строници
 const scrollToTop = document.querySelector('.scroll-to-top');
 if (scrollToTop != null) {
